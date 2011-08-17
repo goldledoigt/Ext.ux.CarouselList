@@ -1,0 +1,20 @@
+.row {
+/*    width: 3000px;*/
+/*    background: pink;*/
+/*    padding: 0 10px;*/
+    display: -webkit-box;
+    -webkit-box-pack: start;
+    -webkit-box-orient: horizontal;
+}
+
+.thumb-wrap {
+    margin: 20px;
+    width: 200px;
+/*    height: 100px;*/
+    background: white;
+    -webkit-box-shadow: 1px 1px 1px 1px #000000;
+}
+
+.thumb {
+    padding: 10px;
+}

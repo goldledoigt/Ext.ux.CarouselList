@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://dev.sencha.com/deploy/touch/resources/css/sencha-touch.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" charset="utf-8"  src="http://dev.sencha.com/deploy/touch/sencha-touch.js"></script>
+        <script type="text/javascript" charset="utf-8"  src="Ext.ux.CarouselListRow.js"></script>
+        <script type="text/javascript" charset="utf-8"  src="Ext.ux.CarouselList.js"></script>
+        <script type="text/javascript" charset="utf-8"  src="data.js"></script>
+    </head>
+    <body>
+        <script>
+        
+        Ext.setup({
+        
+            onReady: function() {
+
+                var store = new Ext.data.Store({
+                    data: __DATA__,
+                    fields: [
+                        {name: 'items'}
+                    ]
+                });
+
+                var carousel = new Ext.Carousel({
+                    fullscreen: true,
+                    items: [{
+                        xtype: 'carousellist',
+                        store: store
+                    }, {
+                        html: 'card 2'
+                    }]
+                })
+
+            }
+
+        });
+        </script>
+    </body>
+</html>
